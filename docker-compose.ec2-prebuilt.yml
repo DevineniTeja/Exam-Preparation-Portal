@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    image: fayivor/exam-prep-backend:latest
+    container_name: exam-assistant-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./exam_assistant.db
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - backend-data:/app/uploads
+      - backend-db:/app
+    restart: unless-stopped
+
+  frontend:
+    image: fayivor/exam-prep-frontend:latest
+    container_name: exam-assistant-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend-data:
+  backend-db:

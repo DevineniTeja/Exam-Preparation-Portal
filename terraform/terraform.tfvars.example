@@ -1,0 +1,12 @@
+# Example Terraform variables
+# Copy this file to terraform.tfvars and customize
+
+aws_region    = "us-east-1"
+instance_type = "t2.medium"
+volume_size   = 30
+
+# AMI IDs for Ubuntu 22.04 LTS by region:
+# us-east-1: ami-0866a3c8686eaeeba
+# us-west-2: ami-05134c8ef96964280
+# eu-west-1: ami-0d2a4a5d69e46ea0b
+# ap-southeast-1: ami-0497a974f8d5dcef8

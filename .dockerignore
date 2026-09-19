@@ -1,0 +1,64 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+venv
+env
+.venv
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+.npm
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files (will be passed as environment variables)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs
+
+# Database (if using SQLite locally)
+*.db
+
+# Uploads (will use volume)
+uploads
+
+# Test
+coverage
+.pytest_cache
+.coverage
+
+# Misc
+*.md
+!README.md

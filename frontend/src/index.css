@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-900 min-h-screen;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-xl;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-800 hover:bg-gray-50 border-2 border-gray-200 hover:border-gray-300;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-200 bg-white;
+  }
+
+  .input:focus {
+    @apply shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-8 backdrop-blur-sm bg-opacity-95;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .auth-container {
+    @apply min-h-screen flex items-center justify-center p-4;
+  }
+
+  .auth-card {
+    @apply w-full max-w-md;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-gray-700 mb-2;
+  }
+
+  .form-group {
+    @apply mb-5;
+  }
+
+  .link-primary {
+    @apply text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-200;
+  }
+
+  .divider {
+    @apply flex items-center my-6;
+  }
+
+  .divider::before,
+  .divider::after {
+    @apply flex-1 border-t-2 border-gray-200;
+    content: '';
+  }
+
+  .divider-text {
+    @apply px-4 text-sm text-gray-500 font-medium;
+  }
+}
